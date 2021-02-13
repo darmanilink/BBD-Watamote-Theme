@@ -75,7 +75,7 @@
     --pfp-opacity: 0.5;
 }
 .da-mask {
-opacity: --pfp-opacity;
+opacity: var(--pfp-opacity);
 }
 
 .appMount-3lHmkl {
