@@ -119,7 +119,7 @@
 	--bd-blue-hover: var(--hover-color); /* betterdiscord hover color [default: var(--hover-color)] */
 	--bd-blue-active: var(--hover-color); /* betterdiscord active color [default: var(--hover-color)] */
 }
-/*change watermarks to custom text*/
+	/*change watermarks to custom text*/
 .typeWindows-2-g3UY>.wordmark-2u86JB:before {
 	content: var(--upper-mark-cv);
 }
@@ -127,9 +127,9 @@
 	content: var(--upper-mark-ver);
 }
 .container-YkUktl:before {
-    content: var(--name-mark-cv);
+ 	content: var(--name-mark-cv);
 }
 
 .container-YkUktl:after {
-    content: var(--name-mark-ver);
+    	content: var(--name-mark-ver);
 }
