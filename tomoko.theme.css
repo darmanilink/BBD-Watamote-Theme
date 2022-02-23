@@ -1,40 +1,45 @@
 /**
- * @name WataMote theme
+ * @name WataMote Theme redux
  * @author DarmaniLink
- * @version 0
+ * @version 1
  * @description WataMote version of clearvision's theme.
  * @source https://github.com/darmanilink
  * @website https://github.com/darmanilink/BBD-Watamote-Theme
  * @invite 
  */
 
-/* Credits to Zerthox for making the original theme. */
+/* Credits to Clearvision and Zerthox for making the original theme. */
 
 /* IMPORT CSS */
-@import url(https://raw.githubusercontent.com/darmanilink/BBD-Watamote-Theme/master/main.css);
+@import url(https://clearvision.gitlab.io/v6/main.css);
 
 /* SETTINGS */
 :root {
+	/*WATERMARK OPTIONS*/
+	--upper-mark-cv: "喪女";
+	--upper-mark-ver: "ワタモテ";
+	--name-mark-cv: "ワタモテ";
+	--name-mark-ver: "黒木友子";
 
 	/* ACCENT COLORS */
-	--main-color: #707070; 
-	--hover-color: #1e63b3; 
-	--success-color: #43b581; 
-	--danger-color: #982929; 
+	--main-color: #707070; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--success-color: #43b581; /* success accent color (hex, rgb or hsl) [default: #43b581] */
+	--danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
 	
 	/* Customization Patch */
-	--channel-unread: var(--main-color); 
-	--channel-color:  rgba(255,255,255,0.3); 
-	--channel-text-selected: #fff; 
-	--muted-color: rgba(255,255,255,0.1); 
-	--url-color: var(--main-color); 
+	--channel-unread: var(--main-color); /* Unread Server channel color. [default:  var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
+	--channel-color:  rgba(255,255,255,0.3); /*Read Server channel color  [default: rgba(255,255,255,0.3);]*/
+	--channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
+	--muted-color: rgba(255,255,255,0.1); /*Muted channel color  [default: rgba(255,255,255,0.1);]*/
+	--url-color: var(--main-color); /*The color of url links [default: var(--main-color)]*/     
 
 	/* STATUS COLORS */
-	--online-color: #43b581;
-	--idle-color: #faa61a; 
-	--dnd-color: #982929; 
-	--streaming-color: 
-	--offline-color: #808080;
+	--online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
+	--idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+	--dnd-color: #982929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+	--streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+	--offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
 
 	/* GENERAL */
 	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed) [default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
@@ -42,13 +47,13 @@
 	--text-normal: rgb(220, 221, 222); /* color of default discord text */
 	--text-muted:  rgb(114, 118, 125); /* color of default discord muted text (e.g.text found in input fields before typing).*/
 	--channels-width: 220px; /* channel list width (240px for Discord default) [default: 220px] */
-	--members-width: 0px; /* member list width [default: 240px] */
-	--avatar-roundness: 50%; /* avatar roundness (0% for squares, 50% for circles) [default: 50%] */
+	--members-width: 240px; /* member list width [default: 240px] */
+	--avatar-roundness: 25%; /* avatar roundness (0% for squares, 50% for circles) [default: 50%] */
 
 	/* APP BACKGROUND */
-	--background-shading: 100%; /* app background shading (0 for complete smoothness) [default: 100%] */
-	--background-overlay: rgba(0, 0, 0, 0.4); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
-	--background-image: url(https://raw.githubusercontent.com/darmanilink/BBD-Watamote-Theme/master/tomoko.jpg); 
+	--background-shading: 0%; /* app background shading (0 for complete smoothness) [default: 100%] */
+	--background-overlay: rgba(0, 0, 0, 0.6); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
+    	--background-image: url(https://raw.githubusercontent.com/darmanilink/BBD-Watamote-Theme/master/tomoko.jpg); 
 	--background-position: center; /* app background position [default: center] */
 	--background-size: cover; /* app background size [default: cover] */
 	--background-repeat: no-repeat; /* app background repeat [default: no-repeat] */
@@ -59,10 +64,10 @@
 	--background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
 	--background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
 	--background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
-	--background-blur: 0px; /* app background blur [default: 0px] */
+	--background-blur: 2px; /* app background blur [default: 0px] */
 	
 	/* HOME BUTTON ICON */
-	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg);
+	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default: url(https://clearvision.gitlab.io/icons/discord.svg)]*/
 	--home-position: center; /* home button icon position [default: center] */
 	--home-size: 40px; /* home button icon size [default: 40px] */
 	
@@ -113,4 +118,18 @@
 	--bd-blue: var(--main-color); /* betterdiscord main color [default: var(--main-color)] */
 	--bd-blue-hover: var(--hover-color); /* betterdiscord hover color [default: var(--hover-color)] */
 	--bd-blue-active: var(--hover-color); /* betterdiscord active color [default: var(--hover-color)] */
+}
+/*change watermarks to custom text*/
+.typeWindows-2-g3UY>.wordmark-2u86JB:before {
+	content: var(--upper-mark-cv);
+}
+.typeWindows-2-g3UY>.wordmark-2u86JB:after {
+	content: var(--upper-mark-ver);
+}
+.container-YkUktl:before {
+    content: var(--name-mark-cv);
+}
+
+.container-YkUktl:after {
+    content: var(--name-mark-ver);
 }
